@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Monster Slayer Game</title>
+</head>
+<body>
+    <header>
+        <h1>Monster Slayer</h1>
+    </header>
+    <main id="game">
+        <section id="monster" class="tables">
+            <h2>Monster Health</h2>
+            <div class="healthbar">
+                <div class="healthbar__value" :style="monsterStyles">{{}}</div>
+            </div>
+        </section>
+        <section id="player" class="tables">
+            <h2>Your Health</h2>
+            <div class="healthbar">
+                <div class="healthbar__value" :style="playerStyles">{{}}</div>
+            </div>
+        </section>
+
+        <section class="buttons">
+            <button @click="attackMonster" class="Attack">Attack</button>
+            <button class="Special">Special Attack</button>
+            <button class="Heal">Heal</button>
+            <button class="Surrender">Surrender</button>
+        </section>
+
+        <section id="log" class="tables">
+            <h2>Battle Log</h2>
+            <ul></ul>
+          </section>
+    </main>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
